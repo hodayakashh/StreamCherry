@@ -4,6 +4,7 @@ import AdminPage from "./AdminPage/AdminPage";
 import SignUpMessage from "./SignUp/SignUpMessage/SignUpMessage";
 import HomePage from "./HomePage/HomePage";
 import SignUpForm from "./SignUp/signUpForm/signUpForm";
+import MoviePage from "./MoviePage/MoviePage";
 import { UserProvider } from "./Contexts/UserContext";
 import  SearchPage  from "./SearchPage/SearchPage";
 import "./App.css";
@@ -21,6 +22,8 @@ function App() {
         <Route path="/main" element={<MainPage />} />
         <Route path="/home" element={<MainPage />} />
         <Route path="/SignUp" element ={<SignUpMessage/>}/>
+        <Route path="/FillDetails" element={<SignUpForm/>}/>
+        <Route path="/movie" element={<MoviePage/>}/>
         <Route path="/FillDetails" element={<SignUpForm/>} />
         <Route path="/search/:query?" element={<SearchPage />} />
         <Route path="/admin-zone" element={<AdminPage />} />

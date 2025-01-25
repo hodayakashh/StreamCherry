@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import MovieCard from "../MovieCard/MovieCard";
 import "./RowSlider.css";
 
-function RowSlider({ title }) {
+function RowSlider({ title, movies}) {
   const sliderRef = useRef(null);
 
   const scrollLeft = () => {
@@ -27,9 +27,9 @@ function RowSlider({ title }) {
         &lt;
       </button>
       <div className="slider-container" ref={sliderRef}>
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
+        {movies.map((movie, index) => (
+          <MovieCard key={index} src={movie.src} title={movie.title} duration={movie.duration} />
+        ))}
       </div>
       <button className="arrow right-arrow" onClick={scrollRight}>
         &gt;

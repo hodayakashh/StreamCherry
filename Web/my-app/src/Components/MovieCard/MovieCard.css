@@ -4,11 +4,13 @@
     height: 200px;
     position: relative;
     overflow: hidden;
-    border-radius: 12px;
+    border-radius: 0px;
     background-color: transparent; /* Remove any background */
     border: none; /* Remove any border */
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
+    font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
   }
   
   .card:hover {
@@ -49,8 +51,20 @@
   
  
   .card-text {
-    font-size: 28px;
-    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .movie-title {
+    margin: 0 10px 0 0;
+    font-size: 16px; 
+    font-weight: bold; 
+  }
+  .movie-duration {
+    color: rgb(204, 202, 202); 
+    font-size: 14px; 
+    font-weight: bold; 
+
   }
   .card-text .bi{
     margin-right: 20px;  
@@ -82,6 +96,9 @@
     transition: color 0.3s ease-in-out;
   }
   
+  .icon-button.info {
+    margin-left: auto; /* הצמד את כפתור ה-info לצד ימין */
+  }
   .icon-button:hover {
     color: #e50914; /* Netflix red on hover */
   }
@@ -90,4 +107,8 @@
     outline: none; /* Remove focus outline */
   }
   
-  
+  .card-video-top {
+    width: 100%;
+    height: auto;
+    
+  }

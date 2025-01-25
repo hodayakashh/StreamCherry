@@ -1,0 +1,200 @@
+/*MoviePopup.css*/
+
+@import url('https://fonts.googleapis.com/css2?family=Netflix+Sans:wght@400;500;700&display=swap');
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .popup-content {
+    position: relative;
+    width: 800px;
+    height: 600px;
+    background-color: rgb(24,24,24); 
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+    flex-direction: column;
+    display: flex;
+    font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    gap: 10px;
+  }
+  .popup-content * {
+    font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+  }
+  .popup-details {
+    display: flex; 
+    flex-direction: row; 
+    width: 100%; 
+    gap: 10px; 
+    font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+
+  }
+  .popup-left {
+    flex: 70%; 
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+  }
+  .popup-right {
+    flex: 40%; 
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+    font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+
+
+  }
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    color: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .movie-card {
+    margin: 10px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+  }
+  .popup-video {
+    width: 100%; 
+    height: auto;
+    max-height: 60%; 
+    display: block; 
+    margin: 0 auto; 
+    border-radius: 5px;
+    overflow: hidden; 
+  }
+  .popup-header {
+    width: 100%;
+    padding: 0px;
+}
+
+.popup-description {
+  width: 100%;
+  padding: 0px;
+  color: white;
+  font-size: 18px;
+  margin-top: 10px;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+
+}
+.popup-additional-info {
+  display: flex;
+  justify-content: flex-start; /* Align items to the left */
+  align-items: center;
+  gap: 8px; /* Space between items */
+  width: 100%;
+  padding: 0px;
+  font-size: 18px;
+  margin-top: 10px;
+  letter-spacing: 0.5px;
+  font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+  font-weight: 400;
+  color: rgb(165, 160, 160) ;
+}
+.popup-additional-info p {
+  margin: 0;
+  font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  color: rgb(165, 160, 160) ;
+}
+
+.popup-header h2 {
+    color: white;
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    letter-spacing: 1px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+.popup-content p {
+    margin-bottom: 10px;
+    z-index: 2;
+    position: relative;
+}
+.popup-video {
+  width: 100%;
+  height: auto;
+  max-height: 60%;
+  display: block;
+  margin: 20px auto;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.rating {
+  color: white !important;
+  opacity: 1 !important;
+  text-decoration: none !important;
+  border: 1.5px solid white;
+  border-radius: 7px;
+  padding: 1px 6px;
+  display: inline-block;
+  font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.popup-cast,
+.popup-categories {
+  margin-top: 20px;
+}
+
+.popup-cast p,
+.popup-categories p {
+  color: rgb(165, 160, 160) ;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  opacity: 0.8;
+}
+
+.popup-categories .categories-title,
+.popup-cast .cast-title {
+  color: rgb(165, 160, 160) ;
+}
+
+.popup-categories .category-name,
+.popup-cast .actor-name {
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+}
+.popup-additional-movies h3 {
+  color: white !important; /* שנה את הצבע ללבן */
+  font-size: 20px; /* ניתן להתאים את הגודל */
+  font-weight: 700; /* משקל הפונט */
+  margin-bottom: 10px; /* ריווח תחתון */
+  font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  
+}

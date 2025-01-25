@@ -1,38 +1,80 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import './MovieCard.css';
+import MoviePopup from "../MoviePopup/MoviePopup";
 
-function MovieCard({movie}) {
+function MovieCard({ src, title, description,releaseYear,rating ,duration, categories, cast, additionalMovies }) {
+  const [isHovered, setIsHovered] = useState(false);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const videoRef = useRef(null);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+    if (videoRef.current) {
+      videoRef.current.pause();
+      videoRef.current.currentTime = 0;
+    }
+  };
+
   const handlePlay = () => {
     alert("Play button clicked!");
     // Add functionality to play the video
   };
 
-  const handleLike = () => {
-    alert("Like button clicked!");
-    // Add functionality to like the movie
+  const handleInfo = () => {
+    setIsPopupOpen(true);
   };
 
-  const handleInfo = () => {
-    alert("Info button clicked!");
-    // Add functionality to show more info about the movie
+  const handleClosePopup = () => {
+    setIsPopupOpen(false);
   };
 
   return (
-    <div className="card">
-      <img src="/media/squirel.jpeg" className="card-img-top" alt="..." />
+    <div 
+      className="card" 
+      onMouseEnter={handleMouseEnter} 
+      onMouseLeave={handleMouseLeave}
+    >
+      <video
+        ref={videoRef}
+        src={src}
+        className="card-video-top"
+        muted
+        loop
+      />
       <div className="card-body">
         <div className="card-text">
+          <p className="movie-title"> {title} </p>
           <button className="icon-button" onClick={handlePlay}>
             <i className="bi bi-play-circle-fill"></i>
           </button>
-          <button className="icon-button" onClick={handleLike}>
-            <i className="bi bi-hand-thumbs-up"></i>
-          </button>
-          <button className="icon-button" onClick={handleInfo}>
+          <span className="movie-duration">{duration}</span>
+          <button className="icon-button info" onClick={handleInfo}>
             <i className="bi bi-info-circle"></i>
           </button>
         </div>
       </div>
+      {isPopupOpen && (
+  <MoviePopup 
+    src={src}
+    title={title}
+    description={description}    
+    duration={duration}
+    categories={categories}
+    rating={rating}
+    releaseYear={releaseYear}
+    cast={cast}
+    additionalMovies={additionalMovies}
+    onClose={handleClosePopup}
+    isOpen={isPopupOpen}
+  />
+)}
     </div>
   );
 }

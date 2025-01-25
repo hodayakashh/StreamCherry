@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Netflix+Sans:wght@400;500;700&display=swap');
+
+/* Movie Grid Wrapper */
+.movie-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    margin: 20px 0;
+  }
+  
+  /* Each Movie Card */
+  .movie-card {
+    width: 230px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #141414;
+    border-radius: 8px;
+    overflow: hidden;
+    color: white;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .movie-card:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+  }
+  
+  /* Movie Image */
+  .movie-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  /* Movie Title */
+  .movie-title {
+    margin: 10px 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  
+  /* Movie Description */
+  .movie-description {
+    margin: 5px 10px 10px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.4;
+    font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  
