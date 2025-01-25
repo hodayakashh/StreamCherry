@@ -1,0 +1,128 @@
+/* TopMenu styling */
+.top-menu .navbar {
+  position: fixed; /* Ensure the navbar stays at the top */
+  top: 0;
+  left: 0;
+  width: 100%; /* Span the full width of the page */
+  z-index: 1000; /* Ensure the navbar is above all other elements */
+  padding: 10px 20px;
+  background-color: var(--background-color); /* Dynamic background color for the navbar */
+  color: var(--text-color); /* Dynamic text color for the navbar */
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Smooth transitions */
+}
+
+.top-menu .navbar .container-fluid {
+  display: flex;
+  justify-content: space-between; /* Ensure space between logo and toggler */
+  align-items: center; /* Center align items vertically */
+}
+
+/* Netflix Logo */
+.top-menu .navbar .navbar-brand {
+  display: flex;
+  align-items: center;
+  color: var(--text-color); /* Dynamic text color */
+  text-decoration: none; /* Remove underline */
+  margin-left: 20px;
+}
+
+.top-menu .navbar .navbar-brand img {
+  width: 95px; /* Logo size */
+  height: auto;
+}
+
+/* Navbar links */
+.top-menu .navbar-nav {
+  display: flex;
+  gap: 15px; /* Space between items */
+  margin-left: 150px;
+}
+
+.top-menu .navbar .nav-link {
+  color: var(--text-color); /* Dynamic link color */
+  margin-right: 15px; /* Add spacing between links */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Smooth hover transition */
+}
+
+.top-menu .navbar .nav-link:hover {
+  color: #e50914; /* Netflix red on hover */
+}
+
+/* Toggler button for small screens */
+.top-menu .navbar-toggler {
+  border: none;
+  color: var(--text-color); /* Dynamic text color */
+  transition: color 0.3s ease-in-out; /* Smooth transitions */
+}
+
+.top-menu .navbar-toggler-icon {
+  background-color: var(--background-color); /* Dynamic icon background */
+}
+
+/* Navbar dropdown menu */
+.top-menu .navbar .dropdown-menu {
+  background-color: var(--background-color); /* Dynamic dropdown background */
+  border: none;
+}
+
+.top-menu .navbar .dropdown-item {
+  color: var(--text-color); /* Dynamic dropdown text color */
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.top-menu .navbar .dropdown-item:hover {
+  background-color: #e50914; /* Netflix red on hover */
+  color: white; /* Ensure readability on hover */
+}
+
+/* Search bar styling */
+.top-menu .form-control {
+  border: 1px solid #ccc; /* Optional: Add a border to the input */
+  background-color: var(--background-color); /* Dynamic input background */
+  color: var(--text-color); /* Dynamic input text color */
+  transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.top-menu .form-control:focus {
+  border-color: #e50914; /* Netflix red for focus */
+  outline: none;
+  box-shadow: none;
+}
+
+/* Buttons */
+.top-menu .btn {
+  background-color: #e50914; /* Netflix red */
+  color: var(--text-color); /* Dynamic button text color */
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin-left: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.top-menu .btn:hover {
+  background-color: #f6121d; /* Slightly brighter red on hover */
+}
+
+/* Netflix Logo */
+.top-menu .netflix-logo {
+  width: 95px; /* Size of the logo */
+  height: auto;
+  margin-left: 20px;
+}
+
+/* Remove the underline for all Link elements in the navbar */
+.top-menu .navbar .navbar-nav a {
+  text-decoration: none;
+  color: inherit; /* Ensure it uses the inherited color */
+}
+
+.top-menu .navbar .navbar-nav a:hover {
+  text-decoration: none; /* Ensure no underline on hover */
+  color: #e50914; /* Netflix red on hover */
+}
+
+
+
+

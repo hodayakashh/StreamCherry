@@ -1,0 +1,74 @@
+
+  .modal h2 {
+    color: #e50914; /* Netflix red */
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: left; /* Align title to the left */
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column; /* Align label and input vertically */
+    text-align: left;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input,
+  .form-group select {
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color:var(--background-color); /* Darker input background */
+    color:var(--text-color);
+    width: 100%; /* Full-width input fields */
+  }
+  
+  .form-group input::placeholder {
+    color: #999; /* Placeholder color */
+  }
+  
+  .form-group select {
+    cursor: pointer; /* Change cursor to pointer for dropdown */
+  }
+  
+  .modal-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .modal-actions .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .modal-actions .btn-primary {
+    background-color: #e50914; /* Netflix red */
+    color: white;
+    border: none;
+  }
+  
+  .modal-actions .btn-secondary {
+    background-color: #555;
+    color: white;
+    border: none;
+  }
+  
+  .modal-actions .btn:hover {
+    opacity: 0.9; /* Slight hover effect */
+  }
+  
+  /* Align the form content to the left */
+  form {
+    text-align: left;
+  }
+  

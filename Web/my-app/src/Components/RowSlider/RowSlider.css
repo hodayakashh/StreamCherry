@@ -1,0 +1,58 @@
+/* Row Title */
+.row-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--text-color);
+  margin: 20px 0;
+  padding-left: 20px;
+  text-align: left;
+}
+
+/* Row Slider Container */
+.row-slider {
+  position: relative;
+  margin: 20px 0;
+}
+
+/* Slider Container */
+.slider-container {
+  display: flex;
+  gap: 20px; /* Space between cards */
+  overflow: hidden; /* Hide overflowing content */
+  scroll-behavior: smooth; /* Smooth scrolling */
+  padding: 20px 0;
+}
+
+/* Arrow Buttons */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  color:  var(--text-color);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
+
+.arrow:hover {
+  background-color: rgba(229, 9, 20, 0.8); /* Netflix red */
+}
+
+/* Movie Cards */
+.slider-container .card {
+  flex-shrink: 0; /* Prevent cards from shrinking */
+  width: 320px; /* Fixed width for cards */
+}

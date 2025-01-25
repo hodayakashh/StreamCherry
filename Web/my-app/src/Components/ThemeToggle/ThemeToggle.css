@@ -1,0 +1,59 @@
+/* Theme Toggle */
+.top-menu .theme-toggle {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    color: var(--text-color); /* Dynamic text color */
+  }
+  
+  .top-menu .theme-label {
+    margin-left: 8px;
+    font-size: 14px;
+    color: var(--text-color); /* Dynamic text color */
+  }
+  
+  /* Switch */
+  .top-menu .switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+  }
+  
+  .top-menu .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .top-menu .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 20px;
+  }
+  
+  .top-menu .slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+  
+  .top-menu input:checked + .slider {
+    background-color: #4caf50; /* Green for active */
+  }
+  
+  .top-menu input:checked + .slider:before {
+    transform: translateX(14px); /* Move toggle to the right */
+  }

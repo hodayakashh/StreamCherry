@@ -1,0 +1,96 @@
+/* Login Overlay */
+.login-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Login Container */
+  .login-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 360px;
+    box-sizing: border-box;
+  }
+  
+  /* Input Fields */
+  .login-form .form-control {
+    background-color: #333;
+    border: none;
+    color: white;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  .login-form .form-control:focus {
+    background-color: #444;
+    color: white;
+    border: 1px solid #e50914;
+    box-shadow: none;
+  }
+  
+  /* Buttons */
+  .login-form .btn-danger {
+    background-color: #e50914;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-form .btn-danger:hover {
+    background-color: #f6121d;
+  }
+  
+  .login-form .btn-light {
+    background-color: #e6e6e6;
+    color: black;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-form .btn-light:hover {
+    background-color: #ddd;
+  }
+  
+  /* Links */
+  .login-form .text-white a {
+    color: #e50914;
+  }
+  
+  .login-form .text-white a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Form Check */
+  .login-form .form-check {
+    display: flex;
+    align-items: center;
+  }
+  
+  .login-form .form-check-input {
+    background-color: #444;
+    border-color: #777;
+    margin-right: 0.5rem;
+  }
+  
+  .login-form .form-check-input:checked {
+    background-color: #e50914;
+    border-color: #e50914;
+  }
+  
+  /* New to Netflix Section */
+  .new-to-netflix {
+    margin-top: 1rem;
+  }
+  
+  /* Protection Notice */
+  .small {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  

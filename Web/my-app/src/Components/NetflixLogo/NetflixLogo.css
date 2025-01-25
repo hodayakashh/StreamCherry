@@ -1,0 +1,17 @@
+.logo-container {
+  position: absolute;
+  top: 20px; /* Distance from top */
+  left: 20px; /* Distance from left */
+  cursor: pointer;
+  z-index: 10; /* Makes sure it stays above other content */
+}
+
+.netflix-logo {
+  width: 150px; /* Increased size for visibility */
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo-container:hover .netflix-logo {
+  transform: scale(1.2); /* Adds a hover effect */
+}

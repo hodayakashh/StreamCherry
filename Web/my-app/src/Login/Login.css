@@ -1,0 +1,13 @@
+/* Login container background */
+.loginPage {
+  background-image: url("../images/netflix-background-image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+}

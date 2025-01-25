@@ -1,0 +1,30 @@
+/* Theme Variables */
+:root {
+  --background-color: white;
+  --text-color: black;
+  --card-background: #f9f9f9;
+  --card-border: #ddd;
+}
+
+body.dark-mode {
+  --background-color: #121212;
+  --text-color: white;
+  --card-background: #1e1e1e;
+  --card-border: #444;
+}
+
+body.light-mode {
+  --background-color: white;
+  --text-color: black;
+  --card-background: #f9f9f9;
+  --card-border: #ddd;
+}
+
+/* Global Styles */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}

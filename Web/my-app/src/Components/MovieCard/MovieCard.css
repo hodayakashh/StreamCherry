@@ -1,0 +1,93 @@
+/* MovieCard Container */
+.card {
+    width: 320px; /* Adjusted for better fit */
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: transparent; /* Remove any background */
+    border: none; /* Remove any border */
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+  }
+  
+  /* Image Styling */
+  .card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image fills the container */
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card:hover .card-img-top {
+    transform: scale(1.1); /* Zoom the image slightly on hover */
+  }
+  
+  /* Card Body (Hidden Content) */
+  .card-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8); /* Dark overlay */
+    color: white;
+    padding: 10px;
+    opacity: 0; /* Hidden initially */
+    transform: translateY(100%); /* Slide out of view initially */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+  
+  .card:hover .card-body {
+    opacity: 1; /* Show on hover */
+    transform: translateY(0); /* Slide into view */
+  }
+  
+ 
+  .card-text {
+    font-size: 28px;
+    text-align: left;
+  }
+  .card-text .bi{
+    margin-right: 20px;  
+  }
+  
+  /* Button Styling */
+  .btn-primary {
+    background-color: #e50914;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 10px auto 0;
+  }
+  
+  .btn-primary:hover {
+    background-color: #b20710;
+  }
+  /* Icon Button Styling */
+.icon-button {
+    background: none; /* Remove default button styling */
+    border: none; /* Remove border */
+    color: white; /* Icon color */
+    font-size: 24px; /* Adjust icon size */
+    cursor: pointer; /* Pointer cursor for interactivity */
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .icon-button:hover {
+    color: #e50914; /* Netflix red on hover */
+  }
+  
+  .icon-button:focus {
+    outline: none; /* Remove focus outline */
+  }
+  
+  

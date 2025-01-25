@@ -1,0 +1,81 @@
+/* Container for the search bar */
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  width: 100%;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+.search-container.expanded {
+  justify-content: flex-start; /* Align expanded search bar to the left */
+  width: auto; /* Adjust to fit the search bar */
+}
+
+/* Search icon styling */
+.search-container .bi-search {
+  cursor: pointer;
+  color: var(--text-color); /* Dynamic color based on theme */
+  transition: color 0.3s ease;
+}
+
+.search-container .bi-search:hover {
+  color: #e50914; /* Netflix red */
+}
+
+/* Sliding search bar */
+.search-container .search-bar {
+  display: flex;
+  flex-direction: row; /* Ensure horizontal alignment */
+  align-items: center; /* Center items vertically */
+  justify-content: flex-start; /* Align items to the left */
+  gap: 10px; /* Add spacing between the input and button */
+  width: auto; /* Ensure the container adjusts to content */
+}
+
+.search-container .form-control {
+  border: 1px solid var(--text-color); /* Dynamic border color */
+  background-color: var(--background-color); /* Dynamic background */
+  color: var(--text-color); /* Dynamic text color */
+  padding: 8px 12px;
+  width: 0;
+  opacity: 0;
+  transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out, color 0.3s ease;
+}
+
+.search-container.expanded .form-control {
+  width: 300px; /* Expanded width */
+  opacity: 1; /* Make visible */
+  border-color: #e50914; /* Netflix red */
+}
+
+.search-container .btn-danger {
+  font-size: 14px;
+  padding: 6px 12px;
+  background-color: #e50914; /* Netflix red */
+  color: var(--text-color); /* Dynamic text color */
+  border: none;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.search-container.expanded .btn-danger {
+  opacity: 1; /* Make visible */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .search-container .form-control {
+    width: 150px; /* Smaller width on mobile */
+  }
+
+  .search-container.expanded .form-control {
+    width: 250px; /* Expand width on focus */
+  }
+}
+
+
+
