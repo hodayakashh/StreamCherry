@@ -1,3 +1,4 @@
+/* Search Results Container */
 .search-results-container {
   margin-top: 50px;
   padding: 20px;
@@ -8,6 +9,7 @@
   flex-direction: column;
 }
 
+/* Title Styling */
 .search-results-container h1 {
   font-size: 40px;
   margin-bottom: 20px;
@@ -16,15 +18,20 @@
   padding-left: 20px; /* Adds spacing from the left */
 }
 
+/* Movie Grid */
 .movie-grid {
   display: grid; /* Ensures grid layout */
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive card layout */
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(200px, 1fr)
+  ); /* Responsive card layout */
   gap: 20px; /* Adds space between the cards */
   width: 100%; /* Ensures full width of the container */
   max-width: 1200px; /* Optional: Limit grid width for better centering */
   margin: 0 auto; /* Centers the grid within the container */
 }
 
+/* Card Styling */
 .movie-grid > * {
   background-color: #1e1e1e; /* Dark background for cards */
   border: 1px solid #444; /* Adds subtle border */
@@ -38,18 +45,26 @@
   transform: scale(1.05); /* Adds a zoom effect on hover */
 }
 
+.movie-grid > *:focus {
+  outline: 2px solid #e50914; /* Adds focus outline for accessibility */
+  transform: scale(1.05); /* Matches hover effect */
+}
+
+/* No Results Message */
 .no-results-message {
-  color: var(--text-color);
   text-align: center;
-  margin-top: 50px; /* Spacing from the top */
+  color: var(--text-color);
+  margin-top: 0; /* Remove extra spacing at the top */
+  padding: 0; /* Ensure no padding */
 }
 
 .no-results-message h1 {
-  font-size: 24px;
+  font-size: 32px; /* Larger font size for emphasis */
   margin-bottom: 10px;
+  color: #e50914; /* Netflix red for emphasis */
 }
 
 .no-results-message p {
-  font-size: 16px;
-  color: var(--text-color); /* Subtle gray for additional text */
+  font-size: 18px;
+  color: #fff; /* Subtle text color */
 }

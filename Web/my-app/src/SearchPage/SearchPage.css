@@ -1,8 +1,29 @@
 .search-page {
-    background-color: var(--background-color); /* Black background for the page */
-    min-height: 100vh; /* Full viewport height */
-    color: var(--text-color); /* White text for readability */
-    padding: 20px; /* Adds padding around the content */
-    box-sizing: border-box; /* Ensures padding doesn't overflow the container */
-  }
-  
+  background-color: var(--background-color); /* Black background for the page */
+  min-height: 100vh; /* Full viewport height */
+  color: var(--text-color); /* White text for readability */
+  padding: 20px; /* Adds padding around the content */
+  box-sizing: border-box; /* Ensures padding doesn't overflow the container */
+}
+/* Center the no movies found message */
+.no-movies-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh; /* Adjust the height to center vertically */
+  text-align: center;
+  color: var(--text-color); /* Use your theme color */
+  margin-top: 150px;
+}
+
+.no-movies-found h1 {
+  font-size: 48px; /* Larger font size for the main heading */
+  margin-bottom: 10px;
+  color: #e50914; /* Netflix red for emphasis */
+}
+
+.no-movies-found p {
+  font-size: 20px; /* Slightly smaller font for the subtitle */
+  color: #fff; /* Light text color for readability */
+}

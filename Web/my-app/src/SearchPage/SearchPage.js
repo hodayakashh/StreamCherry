@@ -56,15 +56,7 @@ function SearchPage() {
   return (
     <div className="search-page">
       <TopMenu />
-      {loading ? (
-        <p>Loading...</p>
-      ) : error ? (
-        <p className="error">{error}</p>
-      ) : movieList.length > 0 ? (
-        <SearchResults movies={movieList} />
-      ) : (
-        <p>No movies found for "{query}".</p>
-      )}
+      <SearchResults movies={movieList} />
     </div>
   );
 }

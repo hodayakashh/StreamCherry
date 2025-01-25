@@ -16,6 +16,7 @@ function SearchResults({ movies }) {
         </>
       ) : (
         <div className="no-results-message">
+          <i className="bi bi-search" style={{ fontSize: "40px", color: "gray" }}></i>
           <h1>No Results Found</h1>
           <p>Try searching for a different title, person, or genre.</p>
         </div>
