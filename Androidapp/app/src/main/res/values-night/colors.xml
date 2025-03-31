@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="netflix_red">#E50914</color>
+    <!-- For light mode, a slightly lighter dark color is used -->
+    <color name="netflix_dark">#333333</color>
+    <!-- In light mode, use dark text colors for readability -->
+    <color name="netflix_light_text">#333333</color>
+    <color name="netflix_dark_text">#666666</color>
+    <!-- Light background for the app -->
+    <color name="netflix_background">#FFFFFF</color>
+    <!-- A light card background -->
+    <color name="netflix_card_background">#F5F5F5</color>
+    <color name="categories_title">#E50914</color>
+</resources>

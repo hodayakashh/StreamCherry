@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Android app</string>
     <string name="Get_Started">Get Started</string>
@@ -5,4 +6,17 @@
     <string name="Signinbtn">Sign In</string>
     <string name="LoginNewToNetflix">new to netflix?</string>
     <string name="LoginSignUp">sign up</string>
+    <string name="admin_icon_description">Admin Icon</string>
+    <string name="admin_zone">Admin Zone</string>
+    <string name="admin_welcome">Welcome to the admin zone! Perform your actions here.</string>
+    <string name="show_actions">Show Actions</string>
+    <string name="hide_actions">Hide Actions</string>
+    <string name="category_name">Category Name</string>
+    <string name="promoted">Promoted:</string>
+    <string name="add_new_category">Add New Category</string>
+    <string-array name="promoted_options">
+        <item>True</item>
+        <item>False</item>
+    </string-array>
+
 </resources>

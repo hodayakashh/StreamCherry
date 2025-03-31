@@ -2,4 +2,15 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="netflix_red">#E50914</color>
+    <color name="netflix_dark">#141414</color>
+    <color name="netflix_light_text">#FFFFFF</color>
+    <color name="netflix_dark_text">#AAAAAA</color>
+    <color name="netflix_background">#141414</color>
+    <color name="netflix_card_background">#12141414</color>
+    <color name="categories_title" >#E50914</color>
+    <color name="top_menu_background">@color/netflix_card_background</color>
+    <color name="search_query_hint" >#E50914</color>
+    <color name="search_text_color" >#FFFFFF</color>
+    <color name="hint_text_color" >#FFFFFF</color>
 </resources>

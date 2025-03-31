@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/netflix_background">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/topMenuFragment"
+            android:name="com.example.androidapp.TopMenuFragment"
+            tools:layout="@layout/fragment_top_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/headerText"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:paddingBottom="16dp"
+                android:text="Add New Movie"
+                android:textColor="@color/netflix_red"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/headerText"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_admin" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <EditText
+            android:id="@+id/editTextTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Movie Title"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:textColor="@color/netflix_light_text"
+            android:textColorHint="@color/netflix_light_text" />
+
+        <!-- שדה קלט: תיאור -->
+        <EditText
+            android:id="@+id/editTextDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Description"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:textColor="@color/netflix_light_text"
+            android:textColorHint="@color/netflix_light_text" />
+
+        <!-- שדה קלט: שנת יציאה -->
+        <EditText
+            android:id="@+id/editTextReleaseYear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Release Year"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:textColorHint="@color/netflix_light_text" />
+
+        <!-- שדה קלט: משך הסרט בדקות -->
+        <EditText
+            android:id="@+id/editTextDuration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Duration (minutes)"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:textColorHint="@color/netflix_light_text" />
+
+
+        <Button
+            android:id="@+id/buttonSelectMovieFile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Movie File (MP4)"
+            android:textColor="@color/netflix_light_text"
+            />
+
+
+        <Button
+            android:id="@+id/buttonSelectMovieImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Movie Image (JPG, PNG, JPEG)"
+            android:textColor="@color/netflix_light_text" />
+
+
+        <EditText
+            android:id="@+id/editTextCast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Cast"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:textColorHint="@color/netflix_light_text" />
+
+
+        <EditText
+            android:id="@+id/editTextDirector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Director"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:textColorHint="@color/netflix_light_text" />
+
+
+        <TextView
+            android:id="@+id/textViewCategories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:text="Categories"
+            android:textColor="@color/categories_title"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:id="@+id/linearLayoutCategories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonCancel"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="Cancel"
+                android:textColor="@color/netflix_light_text" />
+
+            <Button
+                android:id="@+id/buttonAddMovie"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Movie"
+                android:textColor="@color/netflix_light_text" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

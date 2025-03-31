@@ -1,8 +1,8 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
     <style name="Base.Theme.AndroidApp" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/netflix_red</item>
+        <item name="colorPrimaryDark">@color/netflix_dark</item>
     </style>
 
     <style name="Theme.AndroidApp" parent="Base.Theme.AndroidApp" />

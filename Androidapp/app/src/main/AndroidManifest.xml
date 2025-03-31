@@ -12,14 +12,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidApp"
         tools:targetApi="31">
-        <activity
-            android:name=".RegisterActivity"
+
+        <activity android:name=".AddMovieActivity"
+            android:exported="false" />
+        <activity android:name=".EditMovieActivity"
+            android:exported="false" />
+        <activity android:name=".CategoryManagementActivity"
+            android:exported="false" />
+        <activity android:name=".DeleteMovieActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".AddCategoryActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".AdminActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
