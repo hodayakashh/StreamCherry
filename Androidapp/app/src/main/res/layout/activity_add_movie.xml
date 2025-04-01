@@ -13,12 +13,7 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/topMenuFragment"
-            android:name="com.example.androidapp.TopMenuFragment"
-            tools:layout="@layout/fragment_top_menu"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -160,15 +155,6 @@
             android:layout_marginTop="24dp"
             android:gravity="center"
             android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/buttonCancel"
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:text="Cancel"
-                android:textColor="@color/netflix_light_text" />
 
             <Button
                 android:id="@+id/buttonAddMovie"

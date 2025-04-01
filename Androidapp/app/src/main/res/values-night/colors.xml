@@ -13,4 +13,7 @@
     <!-- A light card background -->
     <color name="netflix_card_background">#F5F5F5</color>
     <color name="categories_title">#E50914</color>
+    <color name="search_query_hint" >#E50914</color>
+    <color name="search_text_color" >#FFFFFF</color>
+    <color name="hint_text_color" >#FF000000</color>
 </resources>

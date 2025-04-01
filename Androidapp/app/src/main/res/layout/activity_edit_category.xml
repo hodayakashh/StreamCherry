@@ -14,7 +14,7 @@
         android:id="@+id/tvTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/add_new_category"
+        android:text="@string/edit_category"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textStyle="bold"
         android:textColor="@color/categories_title"
@@ -22,13 +22,6 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
 
-    <!-- Category Name Input -->
-
-    <!-- Promoted Label -->
-
-    <!-- Spinner for Promoted Options -->
-
-    <!-- Button Group for Submit and Cancel -->
 
     <EditText
         android:id="@+id/etCategoryName"
@@ -88,11 +81,11 @@
 
         <!-- Add Category Button -->
         <Button
-            android:id="@+id/btnAddCategory"
+            android:id="@+id/btnEditCategorySave"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/netflix_red"
-            android:text="@string/add_category"
+            android:text="@string/save_changes"
             android:textColor="@color/netflix_light_text"
             tools:ignore="TextContrastCheck" />
 
