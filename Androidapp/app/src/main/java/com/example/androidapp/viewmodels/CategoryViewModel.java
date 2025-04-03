@@ -39,7 +39,7 @@ public class CategoryViewModel extends ViewModel {
         categoryRepository.deleteCategoryFromServer(category, callback);
     }
 
-    // מתודה להוספת קטגוריה לשרת ולעדכון Room
+
     public void addCategory(Category category, Callback<Category> callback) {
         categoryRepository.addCategoryToServer(category, callback);
     }
