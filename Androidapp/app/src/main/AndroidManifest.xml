@@ -15,22 +15,22 @@
         tools:targetApi="31"
         android:usesCleartextTraffic="true">
 
-        <activity android:name=".AddMovieActivity"
+        <activity android:name=".activities.AddMovieActivity"
             android:exported="false" />
-        <activity android:name=".EditMovieActivity"
+        <activity android:name=".activities.EditMovieActivity"
             android:exported="false" />
-        <activity android:name=".CategoryManagementActivity"
+        <activity android:name=".activities.CategoryManagementActivity"
             android:exported="false" />
-        <activity android:name=".DeleteMovieActivity"
-            android:exported="false" />
-        <activity
-            android:name=".AddCategoryActivity"
+        <activity android:name=".activities.DeleteMovieActivity"
             android:exported="false" />
         <activity
-            android:name=".EditCategoryActivity"
+            android:name=".activities.AddCategoryActivity"
             android:exported="false" />
         <activity
-            android:name=".AdminActivity"
+            android:name=".activities.EditCategoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.AdminActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

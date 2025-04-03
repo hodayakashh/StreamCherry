@@ -8,7 +8,7 @@ import androidx.room.RoomDatabase;
 
 import com.example.androidapp.entities.Category;
 
-@Database(entities ={Category.class}, version = 1, exportSchema = false)
+@Database(entities ={Category.class}, version = 3, exportSchema = false)
 public abstract class AppDB extends RoomDatabase {
     private static AppDB instance;
 
@@ -17,7 +17,7 @@ public abstract class AppDB extends RoomDatabase {
     public static synchronized AppDB getInstance(Context context) {
         if (instance == null) {
             instance = Room.databaseBuilder(context.getApplicationContext(),
-                    AppDB.class, "app_database")
+                            AppDB.class, "app_database")
                     .fallbackToDestructiveMigration()
                     .build();
         }

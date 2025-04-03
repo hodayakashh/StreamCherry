@@ -78,7 +78,8 @@
             android:hint="Release Year"
             android:inputType="number"
             android:minHeight="48dp"
-            android:textColorHint="@color/netflix_light_text" />
+            android:textColorHint="@color/netflix_light_text"
+            android:textColor="@color/netflix_light_text"/>
 
         <!-- שדה קלט: משך הסרט בדקות -->
         <EditText
@@ -88,7 +89,8 @@
             android:hint="Duration (minutes)"
             android:inputType="number"
             android:minHeight="48dp"
-            android:textColorHint="@color/netflix_light_text" />
+            android:textColorHint="@color/netflix_light_text"
+            android:textColor="@color/netflix_light_text"/>
 
 
         <Button
@@ -115,17 +117,8 @@
             android:hint="Cast"
             android:inputType="text"
             android:minHeight="48dp"
-            android:textColorHint="@color/netflix_light_text" />
-
-
-        <EditText
-            android:id="@+id/editTextDirector"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Director"
-            android:inputType="text"
-            android:minHeight="48dp"
-            android:textColorHint="@color/netflix_light_text" />
+            android:textColorHint="@color/netflix_light_text"
+            android:textColor="@color/netflix_light_text"/>
 
 
         <TextView
@@ -139,13 +132,14 @@
             android:textStyle="bold" />
 
 
-        <LinearLayout
-            android:id="@+id/linearLayoutCategories"
+        <GridLayout
+            android:id="@+id/gridLayoutCategories"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-        </LinearLayout>
+            android:columnCount="1"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+        </GridLayout>
 
 
         <LinearLayout
@@ -157,7 +151,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/buttonAddMovie"
+                android:id="@+id/btnSaveMovie"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

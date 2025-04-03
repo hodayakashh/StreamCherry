@@ -7,17 +7,24 @@ import androidx.room.Entity;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
+import com.google.gson.annotations.SerializedName;
+
 @Entity
 public class Category {
 
 
-    @PrimaryKey
+    @PrimaryKey (autoGenerate = true)
     private int id;
+
+    @SerializedName("_id")
+    private String ServerId;
     @NonNull
     private String name;
     @Ignore
-    private int[] movies;
+    private transient Movie[] movies;
     private boolean promoted;
+
+    private boolean isSelected;
 
     // No-arg constructor that Room will use
     public Category() {
@@ -32,7 +39,7 @@ public class Category {
 
     // Another parameterized constructor for convenience - not used by Room
     @Ignore
-    public Category(String name, int[] movies, boolean promoted) {
+    public Category(String name, Movie [] movies, boolean promoted) {
         this.name = name;
         this.movies = movies;
         this.promoted = promoted;
@@ -46,13 +53,9 @@ public class Category {
         this.promoted = promoted;
     }
 
-    public int[] getMovies() {
-        return movies;
-    }
 
-    public void setMovies(int[] movies) {
-        this.movies = movies;
-    }
+
+
 
     @NonNull
     public String getName() {
@@ -69,5 +72,29 @@ public class Category {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public boolean isSelected() {
+        return isSelected;
+    }
+
+    public void setSelected(boolean selected) {
+        isSelected = selected;
+    }
+
+    public Movie[] getMovies() {
+        return movies;
+    }
+
+    public void setMovies(Movie[] movies) {
+        this.movies = movies;
+    }
+
+    public String getServerId() {
+        return ServerId;
+    }
+
+    public void setServerId(String serverId) {
+        ServerId = serverId;
     }
 }

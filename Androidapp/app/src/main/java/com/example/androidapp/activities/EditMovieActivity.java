@@ -1,11 +1,13 @@
 // Java
-package com.example.androidapp;
+package com.example.androidapp.activities;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.androidapp.R;
 
 public class EditMovieActivity extends AppCompatActivity {
 

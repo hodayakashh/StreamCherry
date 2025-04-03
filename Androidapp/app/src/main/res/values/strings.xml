@@ -19,7 +19,7 @@
     <string name="edit">edit</string>
     <string name="edit_category">Edit Category</string>
     <string name="save_changes">Save Changes</string>
-    <string name="base_url">"http://10.0.2.2:3000/api/"</string>
+    <string name="BaseUrl">http://10.0.2.2:3000/api/</string>
     <string-array name="promoted_options">
         <item>True</item>
         <item>False</item>
