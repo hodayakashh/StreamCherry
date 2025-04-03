@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.androidapp.R;
 import com.example.androidapp.adapters.CategoriesListAdapter;
+import com.example.androidapp.db.CategoryDao;
 import com.example.androidapp.viewmodels.CategoryViewModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -24,13 +25,14 @@ public class CategoryManagementActivity extends AppCompatActivity {
     private CategoriesListAdapter adapter;
     private CategoryViewModel categoryViewModel;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category_management);
 
         categoryViewModel = new ViewModelProvider(this).get(CategoryViewModel.class);
-
 
 
         RecyclerView lstCategories = findViewById(R.id.lstCategories);
@@ -44,6 +46,7 @@ public class CategoryManagementActivity extends AppCompatActivity {
                     } else if (response.code() == 404) {
                         Log.e("CategoryManagement", "Category not found");
                     } else {
+
                         Log.e("CategoryManagement", "Failed to delete category, code: " + response.code());
                     }
                 }
@@ -78,4 +81,6 @@ public class CategoryManagementActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
     }
+
+
 }

@@ -148,17 +148,12 @@ public class CategoryRepository {
     public void deleteCategoryFromServer(Category category, Callback<Void> callback) {
         // נניח שהקטגוריה כוללת שדה serverId, שהוא המזהה שמגיע מהשרת (MongoDB)
         String serverId = category.getServerId();
+        new Thread(() -> {
+            categoryDao.delete(category);
+            List<Category> categories = categoryDao.getAllCategories();
+            categoryListData.postValue(categories);
+        }).start();
 
-        // אם אין serverId, נמחוק רק באופן מקומי
-        if (serverId == null || serverId.isEmpty()) {
-            new Thread(() -> {
-                categoryDao.delete(category);
-                List<Category> categories = categoryDao.getAllCategories();
-                categoryListData.postValue(categories);
-            }).start();
-            callback.onResponse(null, Response.success(null));
-            return;
-        }
 
         // קריאה למחיקת הקטגוריה מהשרת
         categoryApi.deleteCategory(serverId, new Callback<Void>() {

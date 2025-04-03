@@ -8,6 +8,8 @@ import com.example.androidapp.MyApplication;
 import com.example.androidapp.entities.Category;
 import com.example.androidapp.repositories.CategoryRepository;
 
+import org.jetbrains.annotations.Async;
+
 import java.util.List;
 
 import okhttp3.ResponseBody;
