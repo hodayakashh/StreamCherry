@@ -34,7 +34,7 @@ function MovieCard({ movie }) {
     const timer = setTimeout(() => {
       setIsHovered(true);
       setIsPopupOpen(true);
-    }, 1000); // Wait for 1 second before triggering
+    }, 1500); // Wait for 1 second before triggering
     setHoverTimer(timer);
   };
 
